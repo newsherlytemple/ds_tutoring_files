@@ -3,6 +3,7 @@ package BagExample;
 public class OnlineShopper
 {
     public static void main(String[] args) {
+
         Item[] items = {new Item("Bird feeder", 2050),
                         new Item("Squirrel guard", 1547),
                         new Item("Bird bath", 4499),
@@ -10,16 +11,19 @@ public class OnlineShopper
 
         // NOTE: you can have different values for the item type and the constructor type
         // but only if it's an interface that is implemented by a class
+        // class to class (same class)
+        // interface to class (class that implements the interface)
         BagInterface<Item> shoppingCart = new ArrayListBag<>();
-        int totalCost = 0;
 
-        for (int index = 0; index < items.length; index++){
-            Item nextItem = items[index]; 
-            shoppingCart.add(nextItem);
-            totalCost = totalCost + nextItem.getPrice();
+
+        int totalCost = 0; // initalize total cost to 0
+        for (int index = 0; index < items.length; index++){ // for each item in Items[]
+            Item nextItem = items[index]; // get one item at a time
+            shoppingCart.add(nextItem); // adding item to our bag (shoppingCart)
+            totalCost = totalCost + nextItem.getPrice(); // increasing total price
         }
 
-        while (!shoppingCart.isEmpty()){
+        while (!shoppingCart.isEmpty()){ // while not empty
             System.out.println(shoppingCart.remove());
         }
         
