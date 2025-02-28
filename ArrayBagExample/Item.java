@@ -1,4 +1,4 @@
-package BagExample;
+package ArrayBagExample;
 
 public class Item {
     private String itemName;

@@ -1,4 +1,4 @@
-package BagExample;
+package ArrayBagExample;
 
 import java.util.ArrayList;
 
@@ -35,7 +35,7 @@ public class ArrayListBag<T> implements BagInterface<T> {
         }
         return null; // if empty return null
     }
-    
+    char gender = 'F';
     // to remove specific item
     public boolean remove(T anEntry) {
         return bag.remove(anEntry); // return True if anEntry is removed from bag

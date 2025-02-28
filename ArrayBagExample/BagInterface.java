@@ -1,4 +1,4 @@
-package BagExample;
+package ArrayBagExample;
 
 // map of the bag object
 public interface BagInterface<T> {

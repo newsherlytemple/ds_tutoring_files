@@ -1,0 +1,22 @@
+before, we made bag using an array
+
+some problem with arrays:
+    ALWAYS fixed size
+    even if we dont see this
+    we either:
+        (1) set the size (saves that specfic amount of memory)
+        (2) dont set the size (compiler saves a LOT of memory)
+    so two possible problems:
+        (1) we might run out of room in our array 
+            (if memory chunk is small)
+        (2) we might have too much wasted space in our memory 
+            (if memory chunk is large)
+    we want the most optimal amount of memory to be used
+    ideally, the exact amount of memory that we need for 
+        the size of our bag
+
+how can we do this?
+LINKED NODES!
+
+okay, what is a node?
+    go to whatarenodes.jpeg
