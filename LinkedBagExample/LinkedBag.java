@@ -11,6 +11,8 @@ public class LinkedBag<T> implements BagInterface<T>{
         firstNode = null;
         numberOfEntries = 0;
     }
+//  x   <- a     <- b
+//  numentries = 2
 
     public int getCurrentSize() {
         return numberOfEntries;
@@ -32,10 +34,12 @@ public class LinkedBag<T> implements BagInterface<T>{
         return true;
     }
 
+    //  x   <- a     [<- b] <-killing this one
     public T remove() {
         T result = null;
         if (firstNode != null) {
             result = firstNode.data;
+            System.out.println(firstNode);
             firstNode = firstNode.next; // Remove first node from chain
             numberOfEntries--;
         } // end if
@@ -49,7 +53,7 @@ public class LinkedBag<T> implements BagInterface<T>{
 
     public void clear() {
         while (!isEmpty())
-        remove();
+            remove();
     }
 
     public int getFrequencyOf(T anEntry) {
