@@ -9,7 +9,7 @@ public interface StackInterface<T>
     
     // removes and returns the object at the top of the stack
     // @return the object at the top of the stack
-    // @throws EmptyStackException if the stack is empty before the operation
+    // @throws EmptyStackException if the stack is empty before the pop operation
     public T pop();
 
     // returns the object at the top of the stack
